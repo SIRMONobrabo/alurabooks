@@ -1,0 +1,138 @@
+.cabecalho__menu__hamburguer{
+    width: 24px;
+    height: 24px;
+    background-image: url(../img/Menu.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;   
+}
+.cabecalho__menu__hamburguer:hover{
+    width: 24px;
+    height: 24px;
+    background-image: url(../img/Frame\ 20.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+    transition: 0s;
+}
+
+.cabecalho{
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+}
+
+.container__imagem{
+    padding: 1em;
+}
+
+.lista-menu{
+    display: none;
+    position: absolute;
+    top: 100%;
+}
+
+.container__botao:checked~.lista-menu{
+    display: block;
+}
+
+
+.lista-menu__titulo, .lista-menu__item{
+    padding: 1em;
+    background: var(--branco);
+}
+
+.lista-menu__titulo:hover, .lista-menu__item:hover{
+    padding: 1em;
+    background: var(--azul--degrade);
+    color: var(--branco);
+}
+
+.lista-menu__titulo{
+    color: var(--laranja);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.lista-menu__link{
+    background: var(--azul--degrade);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+}
+
+.lista-menu__link:hover{
+    color: var(--azul--degrade);
+    background: var(--branco);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+}
+.container__botao{
+    display: none;
+}
+
+.container__titulo{
+    display: none;
+}
+
+.opcoes__item{
+    display: none;
+}
+
+.opcoes__botao{
+    display: none;
+}
+
+@media screen and (min-width: 1024px){
+
+    .container__titulo, .container__titulo__negrito{
+        font-family: var(--fonte--secundaria);
+        font-size: 30px;
+    }
+
+    .container__titulo{
+        font-weight: 400;
+        display: block;
+    }
+
+    .container__titulo__negrito{
+        font-weight: 700;
+    }
+
+    .opcoes__item{
+        display: inline;
+        margin: 1.5em;
+        text-transform: uppercase;
+    }
+
+    .opcoes__link{
+        color:var(--preto);
+        text-decoration: none;
+    }
+
+    .container__imagem__transparente{
+        display: none;
+    }
+    
+    .cabecalho__menu__hamburguer{
+        display: none;
+    }
+
+    .opcoes__botao:checked~.lista-menu{
+        display: block;
+    }
+
+    .opcoes__botao{
+        display: none;
+    }
+}
